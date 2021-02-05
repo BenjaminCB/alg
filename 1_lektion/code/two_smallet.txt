@@ -1,0 +1,11 @@
+two_smallest(arr)
+    a = b = INT_MAX         1
+    
+    for num in arr          n + 1
+        if num < a          n
+            b = a           n_a
+            a = num         n_a
+        else if num < b     n - n_a
+            b = num         n_b
+
+    return a, b             1

@@ -1,0 +1,3 @@
+reverse(arr)
+    for i = 1 to floor(arr.length / 2)              floor(n / 2) + 1
+        swap(arr[i], arr[arr.length - i + 1]        floor(n / 2)

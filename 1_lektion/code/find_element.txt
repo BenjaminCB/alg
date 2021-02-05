@@ -1,0 +1,5 @@
+find_element(A, a)
+    for i = 1 to A.length
+        if A[i] == a
+            return i
+    return i
