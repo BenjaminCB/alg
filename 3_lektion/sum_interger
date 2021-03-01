@@ -1,0 +1,23 @@
+func(arr, l, r, n)
+    if l == r
+        return false
+
+    if arr[l] + arr[r] != n
+        first = func(arr, l + 1, r, n)
+        second = func(arr, l, r - 1, n)
+        return (first || second) 
+    else
+        return true
+
+func(arr, l, r, n)
+    if l == r
+        return false
+
+    sum = arr[l] + arr[r]
+
+    if sum < n
+        return func(arr, l + 1, r, n)
+    else if sum > n
+        return func(arr, l, r - 1, n)
+    else 
+        return true

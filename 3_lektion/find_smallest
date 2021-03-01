@@ -1,0 +1,15 @@
+find_smallest(arr)
+    min = INT_MAX
+    for num in arr
+        if num < min
+            min = num
+    return min
+
+find_smallest(arr, l, r)
+    if l - r > 1
+        m = (l + r) / 2
+        first = find_smallest(arr, l, m)
+        second = find_smallest(arr, m + 1, r)
+        return first < second ? first : second
+    else
+        return (l == r || arr[l] < arr[r]) ? arr[l] : arr[r]
