@@ -1,0 +1,37 @@
+/*
+ * 10.4-2
+ * Write an O(n)-time recursive procedure that, given an n-node binary tree,
+ * prints out the key of each node in the tree
+ */
+
+printKeys(T)
+    print(T.key)
+
+    // assuming a binary tree either has 0 or 2 children
+    if T.left != null
+        printKeys(T.right)
+        printKeys(T.left)
+
+/*
+ * In the worst case the right node will always be a leaf this we get
+ * T(n) = T(n-2) + THETA(1) + THETA(1) 
+ * we have proven before that the following is O(n)
+ * T(n) = T(n-1) + THETA(1) 
+ */
+
+/*
+ * 10.4-3
+ * Write an O(n)-time nonorecirseve procedire that, given an n-node binary tree,
+ * prints out the key of each node in the tree. Use a stack as an auxiliary data
+ * structure
+ */
+
+printKeys(T)
+    S = new Stack
+    S.push(T)
+    while S.length
+        U = S.pop()
+        if U != null
+            print U.key
+            S.push(U.left)
+            S.push(U.right)

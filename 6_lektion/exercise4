@@ -1,0 +1,14 @@
+/*
+ * Exercise 4
+ * Give a Θ(n)-time nonrecursive procedure that reverses a singly linked list of n elements. 
+ * The procedure should use no more than constant storage beyond that needed for the list itself.
+ */
+
+reverseList(L)
+    prev = null
+    current = L.head
+
+    while current != null
+        current.next = prev
+        prev = current
+        current = current.next

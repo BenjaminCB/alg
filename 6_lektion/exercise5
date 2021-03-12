@@ -1,0 +1,17 @@
+/*
+ * Exercise 5
+ * Implement a queue by a singly linked list Q. 
+ * The operations Enqueue and Dequeue should still take O(1) time.
+ */
+
+ enqueue(L, x)
+    L.tail.next = x
+    L.tail = x
+
+dequeue(L)
+    if L.head == null
+        error "underflow
+    else
+        key = L.head.key
+        L.head = L.head.next
+        return key

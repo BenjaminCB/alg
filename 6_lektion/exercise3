@@ -1,0 +1,27 @@
+/*
+ * Exercise 3
+ * Singly linked lists are a variant of linked lists where each element x has 
+ * two attributes, x.key that stores the key, and x.next that points to the 
+ * next element in the list. Can you implement the dynamic-set operation
+ * INSERT on a syngly linked list in O(1) time? How about Delete?
+ */
+
+ insert(L, x)
+    x.next = L.head
+    L.head = x
+
+delete(L, x)
+    if L.head != null and L.head.value == x
+        L.head = L.head.next
+
+    node = L.head
+    while node.next != null
+        if node.next == x
+            node.next = node.next.next
+            break
+        else
+            node = node.next
+
+/*
+ * pretty sure this is right, but it would have been easier to write in c
+ */

@@ -1,0 +1,34 @@
+/*
+ * Exercise 1
+ * In class we have seen that using arrays for implementing stack may lead to 
+ * underflow and overflow problems. Propose an alternative implementation of the
+ * stack operations that use doubly linked lists. What is the worst-case running
+ * time for the Pop and Push operations? May we still incur in situations
+ */
+
+push(L, x)
+    x.next = L.head
+    x.prev = null
+    if L.head != null
+        L.head.prev = x
+    L.head = x
+
+pop(L)
+    //empty stack
+    if L.head == null
+        error "underflow"
+
+    key = L.head.key
+
+    //set the new head
+    L.head = L.head.next
+    if L.head != null
+        L.head.prev = null
+
+    return key
+
+/*
+ * We can still undeflow be trying to pop an emty stack, but we can only overflow 
+ * if we run out of memory in which case we have bigger problems
+ */
+
