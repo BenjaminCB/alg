@@ -1,3 +1,4 @@
+```
 minHeapify(A, i)
     l = left(i)
     r = right(i)
@@ -10,3 +11,4 @@ minHeapify(A, i)
     if smallest != i
         swap(A[i], A[smallest])
         minHeapify(A, smallest);
+```
