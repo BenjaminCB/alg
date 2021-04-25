@@ -19,3 +19,5 @@ fibo 1 = 1
 fibo n = go 0 1 n where
     go a b 0 = a
     go a b n = go b (a + b) (n - 1)
+
+fibs = 1 : scanl (+) 1 fibs
