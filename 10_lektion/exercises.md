@@ -42,8 +42,11 @@ The run-time if bfs is $O(V+E)$ thus for this loop we get $O(V(V+E))$ Since ther
 - Blue is back edge
 - Yellow is forward edge
 - Black is cross edge
+
 ![graph](graph.png)
+
 ![timeline](timeline.png)
+
 You can not sort it topologically because the graph is not acyclic $s \rightarrow v \rightarrow w \rightarrow s$.
 
 ## Exercise 4
